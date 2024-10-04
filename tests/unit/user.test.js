@@ -22,8 +22,6 @@ describe('User', () => {
             return users;
         });
 
-        jest.spyOn(require('../../src/user'), 'clearUsers').mockImplementation(() => users = []);
-
         const user = { id: 2, name: 'John' };
         addUser(user);
 
