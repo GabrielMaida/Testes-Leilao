@@ -4,7 +4,7 @@ describe('User', () => {
 
     beforeEach(() => {
         clearUsers();
-        jest.clearAllMocks(); // Limpa os mocks existentes
+        jest.clearAllMocks();
     });
 
     it('should add a user', () => {

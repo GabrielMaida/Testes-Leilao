@@ -1,13 +1,18 @@
-
 let auctions = [];
 let bids = [];
 
 function createAuction(auction) {
     auctions.push(auction);
+    return auctions;
 }
 
 function getAuctionById(id) {
     return auctions.find(auction => auction.id === id);
+}
+
+function clearAuctions(){
+    auctions = [];
+    return auctions;
 }
 
 function getBidsForAuction(auctionId) {
@@ -26,11 +31,13 @@ function placeBid(auctionId, userId, amount) {
     }
 
     bids.push({ auctionId, userId, amount });
+    return bids;
 }
 
 module.exports = {
     createAuction,
     getAuctionById,
     placeBid,
-    getBidsForAuction
+    getBidsForAuction,
+    clearAuctions
 };
